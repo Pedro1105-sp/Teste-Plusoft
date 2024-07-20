@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.2 on win32)" generated="2024-07-20T08:29:22.939931" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\pedro.candido\Desktop\PEDRO\ESTUDOS-QA\Teste-Robot\login.robot">
+<test id="s1-t1" name="Validar tela de Login no site teste da Plusoft" line="8">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-07-20T08:29:24.754856" level="INFO">${name} = Pedro Henrique</msg>
+<var>${name}</var>
+<arg>Pedro Henrique</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-07-20T08:29:24.754856" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-07-20T08:29:24.755856" level="INFO">${password} = senha</msg>
+<var>${password}</var>
+<arg>senha</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-07-20T08:29:24.755856" elapsed="0.000000"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2024-07-20T08:29:24.756852" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\pedro.candido\\Desktop\\PEDRO\\ESTUDOS-QA\\Teste-Robot\\logs\\browser\\traces\\ba543c6a-ffb3-4cb3-8705-f745e12cf6d7"}</msg>
+<msg time="2024-07-20T08:29:28.896879" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\pedro.candido\\Desktop\\PEDRO\\ESTUDOS-QA\\Teste-Robot\\logs\\browser\\traces\\ba543c6a-ffb3-4cb3-8705-f745e12cf6d7"}</msg>
+<arg>browser=chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-07-20T08:29:24.756852" elapsed="4.140027"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-07-20T08:29:30.469974" level="INFO">Successfully initialized new page object and opened url: http://127.0.0.1:5500/HTML/login.html</msg>
+<msg time="2024-07-20T08:29:30.469974" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>http://127.0.0.1:5500/HTML/login.html</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-07-20T08:29:28.897877" elapsed="1.572097"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-07-20T08:29:30.540784" level="INFO">Waited for Element with selector body h2 at state visible</msg>
+<arg>body h2</arg>
+<arg>visible</arg>
+<arg>5000</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-07-20T08:29:30.470971" elapsed="0.069813"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-07-20T08:29:30.601621" level="INFO">Text: 'Login'</msg>
+<arg>body h2</arg>
+<arg>equal</arg>
+<arg>Login</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-20T08:29:30.541782" elapsed="0.060836"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-07-20T08:29:30.603616" level="INFO">Fills the text 'Pedro Henrique' in the given field.</msg>
+<arg>css=input[name=username]</arg>
+<arg>${name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-07-20T08:29:30.602618" elapsed="0.038898"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-07-20T08:29:30.643512" level="INFO">Fills the text 'senha' in the given field.</msg>
+<arg>css=input[name=password]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-07-20T08:29:30.642520" elapsed="0.038888"/>
+</kw>
+<kw name="Click" owner="Browser">
+<arg>css=button[id=login_button]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-20T08:29:30.682411" elapsed="0.200494"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-20T08:29:40.884333" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-20T08:29:30.883908" elapsed="10.000425"/>
+</kw>
+<status status="PASS" start="2024-07-20T08:29:24.749871" elapsed="16.134462"/>
+</test>
+<doc>Suite de testes de Login no teste da Plusoft</doc>
+<status status="PASS" start="2024-07-20T08:29:22.970789" elapsed="18.003089"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

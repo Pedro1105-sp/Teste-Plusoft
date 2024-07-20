@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca</title>
+</head>
+<body>
+    <h2>Busca</h2>
+    <form id="search_form" action="/search" method="get">
+        <label for="search_input">Buscar:</label>
+        <input type="text" id="search_input" name="q" required><br><br>
+        
+        <button type="submit" id="search_button">Buscar</button>
+    </form>
+    
+    <div id="search_results">
+        <!-- Exemplo de resultado de busca -->
+        <div class="resultado">
+            <h3>Resultado 1</h3>
+            <p>Descrição do resultado 1.</p>
+        </div>
+        <div class="resultado">
+            <h3>Resultado 2</h3>
+            <p>Descrição do resultado 2.</p>
+        </div>
+    </div>
+</body>
+</html>
