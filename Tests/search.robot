@@ -5,7 +5,7 @@ Library          Browser
 
 
 *** Test Cases ***
-Validar tela de Pesquisa no site teste da Plusoft
+Realizar busca no site teste da Plusoft
 
 # MASSA DE TESTE PARA REALIZAR A PESQUISA
     ${search}                    Set Variable     Resultado 1
@@ -22,6 +22,19 @@ Validar tela de Pesquisa no site teste da Plusoft
     Fill Text                  css=input[id=search_input]        ${search}     
 
     Click                      css=button[id=search_button]
+
+Verificar se a busca foi encontrada no site teste da Plusoft
+    ${search}                    Set Variable     Resultado 1
+
+    New Browser                browser=chromium    headless=False
+    New Page                   http://127.0.0.1:5500/HTML/search.html
+
+    Wait For Elements State    body h2    visible    5000
+    Get Text                   body h2    equal      Busca
+
+    Fill Text                  css=input[id=search_input]        ${search}     
+
+    Click                      css=button[id=search_button
 
     # ENCONTRAR PROPRIEDADE APÓS CLICAR PARA REALIZAR A PESQUISA, DEVERIA APARECER O RESULTADO PESQUISADO. (VALIDAR SE A PESQUISA FOI REALIZADA COM SUCESSO).
     Get Property               css=h2                     value equal     ${search}

@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.2 on win32)" generated="2024-07-20T08:55:56.852122" rpa="false" schemaversion="5">
-<suite id="s1" name="Search" source="C:\Users\pedro.candido\Desktop\PEDRO\ESTUDOS-QA\Teste-Robot\Tests\search.robot">
-<test id="s1-t1" name="Validar tela de Pesquisa no site teste da Plusoft" line="8">
+<robot generator="Robot 7.0 (Python 3.11.2 on win32)" generated="2024-07-20T09:22:48.111718" rpa="false" schemaversion="5">
+<suite id="s1" name="Search" source="C:\Users\pedro.candido\Desktop\PEDRO\ESTUDOS-QA\Teste-Robot\tests\search.robot">
+<test id="s1-t1" name="Realizar busca no site teste da Plusoft" line="8">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-07-20T08:55:58.427997" level="INFO">${search} = Resultado 1</msg>
+<msg time="2024-07-20T09:22:49.596422" level="INFO">${search} = Resultado 1</msg>
 <var>${search}</var>
 <arg>Resultado 1</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-07-20T08:55:58.427000" elapsed="0.000997"/>
+<status status="PASS" start="2024-07-20T09:22:49.596422" elapsed="0.000000"/>
 </kw>
 <kw name="New Browser" owner="Browser">
-<msg time="2024-07-20T08:55:58.428571" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\pedro.candido\\Desktop\\PEDRO\\ESTUDOS-QA\\Teste-Robot\\Tests\\logs\\browser\\traces\\554c7547-8c34-4ffc-bbbe-f2cea7964020"}</msg>
-<msg time="2024-07-20T08:55:59.668645" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\pedro.candido\\Desktop\\PEDRO\\ESTUDOS-QA\\Teste-Robot\\Tests\\logs\\browser\\traces\\554c7547-8c34-4ffc-bbbe-f2cea7964020"}</msg>
+<msg time="2024-07-20T09:22:49.598416" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\pedro.candido\\Desktop\\PEDRO\\ESTUDOS-QA\\Teste-Robot\\tests\\logs\\browser\\traces\\f54fe779-edb8-4072-8f27-587785828a76"}</msg>
+<msg time="2024-07-20T09:22:51.023026" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\pedro.candido\\Desktop\\PEDRO\\ESTUDOS-QA\\Teste-Robot\\tests\\logs\\browser\\traces\\f54fe779-edb8-4072-8f27-587785828a76"}</msg>
 <arg>browser=chromium</arg>
 <arg>headless=False</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2024-07-20T08:55:58.428571" elapsed="1.240074"/>
+<status status="PASS" start="2024-07-20T09:22:49.597387" elapsed="1.425639"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2024-07-20T08:56:00.451022" level="INFO">Successfully initialized new page object and opened url: http://127.0.0.1:5500/HTML/search.html</msg>
-<msg time="2024-07-20T08:56:00.451022" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2024-07-20T09:22:51.644672" level="INFO">Successfully initialized new page object and opened url: http://127.0.0.1:5500/HTML/search.html</msg>
+<msg time="2024-07-20T09:22:51.644672" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>http://127.0.0.1:5500/HTML/search.html</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2024-07-20T08:55:59.669642" elapsed="0.782378"/>
+<status status="PASS" start="2024-07-20T09:22:51.024023" elapsed="0.620649"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2024-07-20T08:56:00.537311" level="INFO">Waited for Element with selector body h2 at state visible</msg>
+<msg time="2024-07-20T09:22:51.714657" level="INFO">Waited for Element with selector body h2 at state visible</msg>
 <arg>body h2</arg>
 <arg>visible</arg>
 <arg>5000</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2024-07-20T08:56:00.453017" elapsed="0.084294"/>
+<status status="PASS" start="2024-07-20T09:22:51.645669" elapsed="0.069993"/>
 </kw>
 <kw name="Get Text" owner="Browser">
-<msg time="2024-07-20T08:56:00.603371" level="INFO">Text: 'Busca'</msg>
+<msg time="2024-07-20T09:22:51.780480" level="INFO">Text: 'Busca'</msg>
 <arg>body h2</arg>
 <arg>equal</arg>
 <arg>Busca</arg>
@@ -47,26 +47,95 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2024-07-20T08:56:00.538310" elapsed="0.065061"/>
+<status status="PASS" start="2024-07-20T09:22:51.717651" elapsed="0.062829"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2024-07-20T08:56:00.606372" level="INFO">Fills the text 'Resultado 1' in the given field.</msg>
+<msg time="2024-07-20T09:22:51.784479" level="INFO">Fills the text 'Resultado 1' in the given field.</msg>
 <arg>css=input[id=search_input]</arg>
 <arg>${search}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2024-07-20T08:56:00.604369" elapsed="0.040893"/>
+<status status="PASS" start="2024-07-20T09:22:51.782477" elapsed="0.047391"/>
 </kw>
 <kw name="Click" owner="Browser">
 <arg>css=button[id=search_button]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-07-20T08:56:00.646258" elapsed="0.168663"/>
+<status status="PASS" start="2024-07-20T09:22:51.831867" elapsed="0.208951"/>
+</kw>
+<status status="PASS" start="2024-07-20T09:22:49.592199" elapsed="2.449617"/>
+</test>
+<test id="s1-t2" name="Verificar se a busca foi encontrada no site teste da Plusoft" line="26">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-07-20T09:22:52.171565" level="INFO">${search} = Resultado 1</msg>
+<var>${search}</var>
+<arg>Resultado 1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-07-20T09:22:52.171565" elapsed="0.000997"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2024-07-20T09:22:52.174558" level="INFO">Switching browser to browser=e6a33e6e-a74b-4f37-bc6a-1a327a5ef67e</msg>
+<msg time="2024-07-20T09:22:52.178548" level="INFO">Successfully changed active browser: browser=e6a33e6e-a74b-4f37-bc6a-1a327a5ef67e</msg>
+<msg time="2024-07-20T09:22:52.179548" level="INFO">Reusing existing browser with id: browser=e6a33e6e-a74b-4f37-bc6a-1a327a5ef67e</msg>
+<arg>browser=chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-07-20T09:22:52.172562" elapsed="0.006986"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-07-20T09:22:52.795445" level="INFO">Successfully initialized new page object and opened url: http://127.0.0.1:5500/HTML/search.html</msg>
+<msg time="2024-07-20T09:22:52.795445" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>http://127.0.0.1:5500/HTML/search.html</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-07-20T09:22:52.182544" elapsed="0.613900"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-07-20T09:22:52.856282" level="INFO">Waited for Element with selector body h2 at state visible</msg>
+<arg>body h2</arg>
+<arg>visible</arg>
+<arg>5000</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-07-20T09:22:52.799436" elapsed="0.056846"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-07-20T09:22:52.910138" level="INFO">Text: 'Busca'</msg>
+<arg>body h2</arg>
+<arg>equal</arg>
+<arg>Busca</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-20T09:22:52.857280" elapsed="0.052858"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-07-20T09:22:52.912133" level="INFO">Fills the text 'Resultado 1' in the given field.</msg>
+<arg>css=input[id=search_input]</arg>
+<arg>${search}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-07-20T09:22:52.911137" elapsed="0.032052"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-20T09:22:53.381556" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-20T09:22:53.382556" level="INFO">See also file:///C:/Users/pedro.candido/Desktop/PEDRO/ESTUDOS-QA/Teste-Robot/tests/logs/playwright-log.txt for additional details.</msg>
+<msg time="2024-07-20T09:22:53.382556" level="FAIL">Error: locator.click: Unexpected token "" while parsing selector "button[id=search_button"</msg>
+<arg>css=button[id=search_button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="FAIL" start="2024-07-20T09:22:52.943189" elapsed="0.448365">Error: locator.click: Unexpected token "" while parsing selector "button[id=search_button"</status>
 </kw>
 <kw name="Get Property" owner="Browser">
-<msg time="2024-07-20T08:56:00.816883" level="FAIL">ValueError: Argument 'assertion_operator' got value 'Resultado 1' that cannot be converted to AssertionOperator or None.</msg>
 <arg>css=h2</arg>
 <arg>value equal</arg>
 <arg>${search}</arg>
@@ -74,26 +143,26 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the ``property`` of the element found by ``selector``.</doc>
-<status status="FAIL" start="2024-07-20T08:56:00.815884" elapsed="0.000999">ValueError: Argument 'assertion_operator' got value 'Resultado 1' that cannot be converted to AssertionOperator or None.</status>
+<status status="NOT RUN" start="2024-07-20T09:22:53.391554" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-07-20T08:56:00.817913" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-07-20T09:22:53.392527" elapsed="0.000000"/>
 </kw>
-<status status="FAIL" start="2024-07-20T08:55:58.424008" elapsed="2.394870">ValueError: Argument 'assertion_operator' got value 'Resultado 1' that cannot be converted to AssertionOperator or None.</status>
+<status status="FAIL" start="2024-07-20T09:22:52.160469" elapsed="1.233074">Error: locator.click: Unexpected token "" while parsing selector "button[id=search_button"</status>
 </test>
 <doc>Suite de testes na tela de Pesquisa no teste da Plusoft</doc>
-<status status="FAIL" start="2024-07-20T08:55:56.854117" elapsed="4.093819"/>
+<status status="FAIL" start="2024-07-20T09:22:48.113713" elapsed="5.393507"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Search">Search</stat>
+<stat pass="1" fail="1" skip="0" id="s1" name="Search">Search</stat>
 </suite>
 </statistics>
 <errors>
