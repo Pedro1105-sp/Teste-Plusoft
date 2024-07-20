@@ -34,10 +34,6 @@ Validar redirecionamento tela para a tela de Pesquisa no site teste da Plusoft
     New Browser                browser=chromium    headless=False
     New Page                   http://127.0.0.1:5500/HTML/login.html
 
-
-    Wait For Elements State    body h2    visible    5000
-    Get Text                   body h2    equal      Login
-
     Fill Text                  css=input[name=username]                 ${name}
     Fill Text                  css=input[name=password]                 ${password}
 
